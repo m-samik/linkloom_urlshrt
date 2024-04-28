@@ -4,26 +4,91 @@
 <style>
   body {
     background: linear-gradient(to bottom, #121212, #1a1a1a);
-    color: #fff; /* Set text color to white for better contrast */
+    color: #fff;
+    /* Set text color to white for better contrast */
   }
 </style>
 
 <div class="px-4 pt-5 my-5 text-center border-bottom">
   {% load static %}
   <img src="{% static 'linkloom_logo.png' %}">
+  &nbsp;
   <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">LinkLoom is a sleek and efficient URL shortener app that transforms lengthy web addresses into concise, easy-to-share links. With its intuitive interface and robust functionality, LinkLoom simplifies the process of sharing URLs, making it effortless to navigate the web with shortened, personalized links tailored to your needs.</p>
+    <p class="lead mb-4">LinkLoom is a sleek and efficient URL shortener app that transforms lengthy web addresses into
+      concise, easy-to-share links. With its intuitive interface and robust functionality, LinkLoom simplifies the
+      process of sharing URLs, making it effortless to navigate the web with shortened, personalized links tailored to
+      your needs.</p>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-      <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Shorten Now</button>
+      <a href="#myclick" class="btn btn-primary">
+        Click Now </a>
+    </div>
+  </div>
+</div>
+<div class="container px-4 py-5" id="hanging-icons">
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+      <div
+        class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        <svg class="bi" width="1em" height="1em">
+          <use xlink:href="#toggles2" />
+        </svg>
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis">Unique Slug Generation</h3>
+        <p>Implement a sophisticated algorithm to generate unique slugs for shortened URLs. This feature ensures that
+          each shortened URL has a distinct and memorable identifier, reducing the likelihood of collisions and making
+          it easier for users to manage and share their links.</p>
+        <a href="#" class="btn btn-primary">
+          Read more
+        </a>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div
+        class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        <svg class="bi" width="1em" height="1em">
+          <use xlink:href="#cpu-fill" />
+        </svg>
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis">Advanced Analytics</h3>
+        <p>Enhance your app's analytics capabilities by providing detailed insights into the performance of shortened
+          URLs. Track metrics such as click-through rates, geographic locations of users, referral sources, device
+          types, and time-based analytics. This feature empowers users to gain valuable insights into the effectiveness
+          of their marketing campaigns, content distribution strategies, and audience engagement.</p>
+        <a href="#" class="btn btn-primary">
+          Read more
+        </a>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div
+        class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        <svg class="bi" width="1em" height="1em">
+          <use xlink:href="#tools" />
+        </svg>
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis">Speedy Analytics</h3>
+        <p>Optimize the analytics processing and reporting system to deliver real-time or near real-time analytics data
+          to users. By leveraging advanced caching mechanisms, asynchronous processing, and efficient database querying
+          techniques, your app can provide instantaneous access to analytics data, allowing users to monitor the
+          performance of their shortened URLs with minimal latency. This feature enables users to make timely
+          adjustments to their strategies and maximize the impact of their shared links.</p>
+        <a href="#" class="btn btn-primary">
+          Read more
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
 
-<div class="container">
+
+<div class="container" style="color: black;">
   <div class="card mt-5">
     <div class="card-header text-center py-3">
-      <h1>URL Shortner Application <i class="fas fa-link px-2"></i></h1>
+      <h1 class=".myclick">URL Shortner <i class="fas fa-link px-2"></i></h1>
     </div>
     <div class="px-3 py-4">
       <form action="" method="POST">
@@ -47,7 +112,7 @@
 
   {% if new_url %}
 
-  <div class="mx-auto text-center mt-5">
+  <div class="mx-auto text-center mt-5" style="color: white;">
     <h2 class="text-danger">Your shortened Url</h2>
     <p>You can copy the Link below and share it with your friends</p>
     <p class="">{{new_url}}</p>
